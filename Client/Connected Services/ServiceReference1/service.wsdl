@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" />
+      <xsd:import namespace="urn:MathNet/Numerics/LinearAlgebra" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetMatrixData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatrixData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMatrixData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatrixDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetVectorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVectorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetVectorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVectorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompileY1_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileY1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompileY1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileY1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompileY2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileY2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompileY2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileY2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompileY3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompileY3" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CompileY3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileY3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MainThreadCalculating_InputMessage">
+    <wsdl:part name="parameters" element="tns:MainThreadCalculating" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MainThreadCalculating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MainThreadCalculatingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetMatrixData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMatrixData" message="tns:IService1_GetMatrixData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMatrixDataResponse" message="tns:IService1_GetMatrixData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVectorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetVectorData" message="tns:IService1_GetVectorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetVectorDataResponse" message="tns:IService1_GetVectorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileY1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CompileY1" message="tns:IService1_CompileY1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CompileY1Response" message="tns:IService1_CompileY1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileY2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CompileY2" message="tns:IService1_CompileY2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CompileY2Response" message="tns:IService1_CompileY2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompileY3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CompileY3" message="tns:IService1_CompileY3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CompileY3Response" message="tns:IService1_CompileY3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MainThreadCalculating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MainThreadCalculating" message="tns:IService1_MainThreadCalculating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MainThreadCalculatingResponse" message="tns:IService1_MainThreadCalculating_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttp" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMatrixData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMatrixData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVectorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetVectorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileY1">
+      <soap:operation soapAction="http://tempuri.org/IService1/CompileY1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileY2">
+      <soap:operation soapAction="http://tempuri.org/IService1/CompileY2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompileY3">
+      <soap:operation soapAction="http://tempuri.org/IService1/CompileY3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MainThreadCalculating">
+      <soap:operation soapAction="http://tempuri.org/IService1/MainThreadCalculating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="basicHttp" binding="tns:basicHttp">
+      <soap:address location="http://localhost:8000/WCF_TRSPO/Service1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

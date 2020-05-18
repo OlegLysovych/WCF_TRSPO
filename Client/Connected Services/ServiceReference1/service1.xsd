@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" />
+  <xs:element name="GetMatrixData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="Letter" type="q1:MatrixEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatrixDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="GetMatrixDataResult" nillable="true" type="q2:ObjectObgortka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVectorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="Letter" type="q3:VectorEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVectorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="GetVectorDataResult" nillable="true" type="q4:ObjectObgortka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompileY1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="vectorB" nillable="true" type="q5:VectorOfdouble" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="matrixA" nillable="true" type="q6:MatrixOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompileY1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="CompileY1Result" nillable="true" type="q7:ObjectObgortka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompileY2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="vectorC1" nillable="true" type="q8:VectorOfdouble" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="matrixA1" nillable="true" type="q9:MatrixOfdouble" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="vectorB1" nillable="true" type="q10:VectorOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompileY2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="CompileY2Result" nillable="true" type="q11:ObjectObgortka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompileY3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="matrixA2" nillable="true" type="q12:MatrixOfdouble" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="matrixB2" nillable="true" type="q13:MatrixOfdouble" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="matrixC2" nillable="true" type="q14:MatrixOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompileY3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="CompileY3Result" nillable="true" type="q15:ObjectObgortka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainThreadCalculating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="n" type="xs:int" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="matrixY3" nillable="true" type="q16:MatrixOfdouble" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="vectorY2" nillable="true" type="q17:VectorOfdouble" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MathNet.Numerics.LinearAlgebra" minOccurs="0" name="vectorY1" nillable="true" type="q18:VectorOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainThreadCalculatingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCF_TRSPO_Lib" minOccurs="0" name="MainThreadCalculatingResult" nillable="true" type="q19:ObjectObgortka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

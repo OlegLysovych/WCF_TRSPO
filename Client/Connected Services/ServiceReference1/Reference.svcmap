@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="614f3ebc-b137-4968-951c-60962cc056d1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/WCF_TRSPO" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f1a7ad9f-054c-463e-b34f-ca945e23b501" SourceId="1" SourceUrl="http://localhost:8000/WCF_TRSPO" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="daf3ff96-20be-42f0-aa55-4488d4291002" SourceId="1" SourceUrl="http://localhost:8000/WCF_TRSPO" />
+    <MetadataFile FileName="WCF_TRSPO_Lib.xsd" MetadataType="Schema" ID="4254b4b5-9a77-45e6-94c5-d7a68260f285" SourceId="1" SourceUrl="http://localhost:8000/WCF_TRSPO" />
+    <MetadataFile FileName="MathNet.Numerics.LinearAlgebra.xsd" MetadataType="Schema" ID="0bcc64c4-507a-4fbf-a57a-3e20c1264752" SourceId="1" SourceUrl="http://localhost:8000/WCF_TRSPO" />
+    <MetadataFile FileName="LinearAlgebra.xsd" MetadataType="Schema" ID="21f4385a-f06a-4049-977a-d789b7d2b880" SourceId="1" SourceUrl="http://localhost:8000/WCF_TRSPO" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="22ba4b05-579d-46dd-b4f6-80ff0b8fb3ba" SourceId="1" SourceUrl="http://localhost:8000/WCF_TRSPO" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
